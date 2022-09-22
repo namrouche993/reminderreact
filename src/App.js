@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+
+import { useState } from "react";
 
 function App() {
+  const [number,setNumber]=useState(0)
+  Countnumber = () => {
+    setNumber(number+2)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <button onClick={Countnumber}>count number</button> <br></br>
+          the number is equal : {number}
+          Edit js and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
